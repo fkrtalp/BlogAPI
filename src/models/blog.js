@@ -23,6 +23,11 @@ const blogCategorySchema = new mongoose.Schema(
 
 const blogPostSchema = new mongoose.Schema(
   {
+    UserId: {
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+      require: true,
+    },
     blogCategoryId: {
       type: mongoose.Schema.ObjectId,
       ref: "BlogCategory",
