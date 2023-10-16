@@ -10,7 +10,7 @@ const { User}  = require("../controllers/user");
 
 // login  ------------------------------------------
 router.post("/login", User.login);
-// router.all("/logout", User.logout);
+router.get("/logout", User.logout);
 
 router.route("/")
     .get(User.list)
