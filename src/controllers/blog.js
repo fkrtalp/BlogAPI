@@ -4,11 +4,12 @@
 // Catch async-errors and send to errorHandler:
 require("express-async-errors");
 
-const { BlogCategory, BlogPost } = require('../models/blog');
+const { BlogCategory, BlogPost } = require("../models/blog");
 
 // BlogCategory
 
 module.exports.BlogCategory = {
+  
   list: async (req, res) => {
     const data = await BlogCategory.find();
     res.status(200).send({
@@ -20,13 +21,14 @@ module.exports.BlogCategory = {
   create: async (req, res) => {
     const data = await BlogCategory.create(req.body);
 
-    res.status(20).send({
+    res.status(202).send({
       error: false,
       body: req.body,
       result: data,
     });
   },
   read: async (req, res) => {
+
     const data = await BlogCategory.findOne({ _id: req.params.categoryId });
 
     res.status(200).send({

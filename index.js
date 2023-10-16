@@ -27,6 +27,7 @@ app.all('/', (req, res) => {
 })
 
 // Routes:
+app.use('/user' , require('./src/routes/user'))
 app.use('/blog', require('./src/routes/blog'))
 
 /* ------------------------------------------------------- */

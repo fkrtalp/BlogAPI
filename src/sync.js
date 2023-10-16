@@ -1,6 +1,6 @@
 "use strict"
 
-const { BlogCategory, BlogPost } = require('./models/blogModel')
+const { BlogCategory, BlogPost } = require('./models/blog')
 
 module.exports = async () => {
 
